@@ -1,4 +1,4 @@
-package dataStructures.AnalysisAlgorithm;
+package datastructures.AnalysisAlgorithm;
 
 /**
  * 求最大子序列问题

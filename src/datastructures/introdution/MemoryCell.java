@@ -1,4 +1,4 @@
-package dataStructures.introdution;
+package datastructures.introdution;
 
 public class MemoryCell {
 	//定义一个变量用来存储数据

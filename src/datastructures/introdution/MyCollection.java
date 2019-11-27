@@ -1,4 +1,4 @@
-package dataStructures.introdution;
+package datastructures.introdution;
 
 /**
  * 设计一个泛型类，它存储Object对象的集合（在数组中），以及该集合的当前大小。

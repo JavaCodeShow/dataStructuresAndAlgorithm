@@ -1,4 +1,4 @@
-package dataStructures.introdution;
+package datastructures.introdution;
 
 /**
  * 求最大子序列

@@ -1,8 +1,7 @@
-package dataStructures.introdution;
+package datastructures.introdution;
 
 import java.util.HashSet;
 import java.util.Set;
-import java.util.TreeSet;
 
 /**
  * 编写一个程序，如果输入的是“abc"，那么输出的是"abc","acb","bac","bca","cab","cba"

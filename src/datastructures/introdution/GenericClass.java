@@ -1,6 +1,4 @@
-package dataStructures.introdution;
-
-import java.util.Collection;
+package datastructures.introdution;
 
 class Shape {
 

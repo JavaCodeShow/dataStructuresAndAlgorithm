@@ -1,4 +1,4 @@
-package dataStructures.ListAndStackAndQueue;
+package datastructures.ListAndStackAndQueue;
 
 import java.util.Iterator;
 

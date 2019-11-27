@@ -1,4 +1,4 @@
-package dataStructures.introdution;
+package datastructures.introdution;
 
 public class FindMaxDemo {
 	public static void main(String[] args) {

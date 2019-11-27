@@ -1,4 +1,4 @@
-package dataStructures.introdution;
+package datastructures.introdution;
 
 import java.util.Comparator;
 

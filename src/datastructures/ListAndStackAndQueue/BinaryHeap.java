@@ -1,4 +1,4 @@
-package dataStructures.ListAndStackAndQueue;
+package datastructures.ListAndStackAndQueue;
 
 public class BinaryHeap<AnyType extends Comparable<? super AnyType>> {
 	private static final int DEFAULT_CAPACITY = 10;

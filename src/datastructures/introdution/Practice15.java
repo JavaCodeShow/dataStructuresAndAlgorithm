@@ -1,4 +1,4 @@
-package dataStructures.introdution;
+package datastructures.introdution;
 
 /**
  * 编写一种递归方法，它返回数N的二进制中表示1的个数。

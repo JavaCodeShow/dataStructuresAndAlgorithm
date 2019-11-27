@@ -1,4 +1,4 @@
-package dataStructures.introdution;
+package datastructures.introdution;
 //recurdive：递归
 public class Recursion {
 	public static int f(int x) {

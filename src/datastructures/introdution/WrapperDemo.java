@@ -1,4 +1,4 @@
-package dataStructures.introdution;
+package datastructures.introdution;
 
 public class WrapperDemo {
 	public static void main(String[] args) {

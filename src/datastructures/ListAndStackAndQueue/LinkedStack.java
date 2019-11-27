@@ -1,6 +1,5 @@
-package dataStructures.ListAndStackAndQueue;
+package datastructures.ListAndStackAndQueue;
 
-import java.io.File;
 import java.util.LinkedList;
 import java.util.List;
 

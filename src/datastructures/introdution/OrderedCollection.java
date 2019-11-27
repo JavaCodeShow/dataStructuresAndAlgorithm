@@ -1,4 +1,4 @@
-package dataStructures.introdution;
+package datastructures.introdution;
 /**
  * 设计一个泛型类OrderedCollection，它存储Compareble对象的集合（在数组中），以及该集合的当前大小。
  * 提供public方法isEmpty,makeEmpty,insert,remove,findMin和fingMax.

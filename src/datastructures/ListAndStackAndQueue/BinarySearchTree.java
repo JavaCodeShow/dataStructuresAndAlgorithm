@@ -1,4 +1,4 @@
-package dataStructures.ListAndStackAndQueue;
+package datastructures.ListAndStackAndQueue;
 
 /**
  * 手动实现二叉查找树
