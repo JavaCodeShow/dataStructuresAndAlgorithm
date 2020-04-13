@@ -9,7 +9,7 @@ package datastructures.array;
  * @create 2020-04-13   16:08
  */
 public class SparseArray {
-    private static final int row = 9;
+    private static final int row = 7;
     private static final int col = 7;
 
     public static void main(String[] args) {
@@ -77,7 +77,7 @@ public class SparseArray {
     public static void prt(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
-                System.out.print(arr[i][j] + " ");
+                System.out.printf("%d\t\t", arr[i][j]);
             }
             System.out.println("\n");
         }
