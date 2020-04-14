@@ -23,19 +23,29 @@ public class BubbleSort {
         int length = arr.length;
         for (int i = 0; i < length; i++) {
             int tmp = 0;
+            // 加入这个标志位进行判断的原因是如果没有一个数据发生过交换，
+            // 说明当前数组里面的数据已经是有序的了。那么就没有必要进行交换了。
+            boolean flag = false;
             for (int j = 0; j < length - i - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
+                    flag = true;
                     tmp = arr[j + 1];
                     arr[j + 1] = arr[j];
                     arr[j] = tmp;
                 }
+            }
+            if (!flag) {
+                break;
+            } else {
+                flag = false;
             }
         }
         return arr;
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 3, 2, 6, 5};
+        int[] arr = {1, 3, 2, 6, 5, -1};
+
         System.out.println(Arrays.toString(bubbleSort(arr)));
     }
 }
