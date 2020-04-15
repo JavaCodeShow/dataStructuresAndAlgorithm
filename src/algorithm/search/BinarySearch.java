@@ -18,12 +18,12 @@ public class BinarySearch {
         int heigth = arr.length;
         int low = 0;
         int mid;
-        while (low <= heigth) {
+        while (low < heigth) {
             mid = (low + heigth) / 2;
             if (arr[mid] < k) {
-                low = mid;
+                low = mid + 1;
             } else if (arr[mid] > k) {
-                heigth = mid;
+                heigth = mid - 1;
             } else {
                 return mid;
             }
