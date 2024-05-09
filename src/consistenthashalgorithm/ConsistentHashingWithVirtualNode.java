@@ -44,30 +44,6 @@ public class ConsistentHashingWithVirtualNode {
         }
     }
 
-    private static String getVirtualNodeName(String realName, int num) {
-        return realName + "&&VN" + String.valueOf(num);
-    }
-
-    private static String getRealNodeName(String virtualName) {
-        return virtualName.split("&&")[0];
-    }
-
-    private static String getServer(String widgetKey) {
-        int hash = HashUtil.getHash(widgetKey);
-
-        // 只取出所有大于该hash值的部分而不必遍历整个Tree
-        SortedMap<Integer, String> subMap = virtualNodes.tailMap(hash);
-        String virtualNodeName;
-        if (subMap == null || subMap.isEmpty()) {
-
-            // hash值在最尾部，应该映射到第一个group上
-            virtualNodeName = virtualNodes.get(virtualNodes.firstKey());
-        } else {
-            virtualNodeName = subMap.get(subMap.firstKey());
-        }
-        return getRealNodeName(virtualNodeName);
-    }
-
     private static void refreshHashCircle() {
         // 当集群变动时，刷新hash环，其余的集群在hash环上的位置不会发生变动
         virtualNodes.clear();
@@ -80,6 +56,31 @@ public class ConsistentHashingWithVirtualNode {
             }
         }
     }
+
+    private static String getVirtualNodeName(String realName, int num) {
+        return realName + "&&VN" + num;
+    }
+
+    private static String getRealNodeName(String virtualName) {
+        return virtualName.split("&&")[0];
+    }
+
+    private static String getServer(String widgetKey) {
+        int hash = HashUtil.getHash(widgetKey);
+
+        // 只取出所有大于该hash值的部分而不必遍历整个Tree
+        SortedMap<Integer, String> subMap = virtualNodes.tailMap(hash);
+        String virtualNodeName;
+        if (subMap.isEmpty()) {
+
+            // hash值在最尾部，应该映射到第一个group上
+            virtualNodeName = virtualNodes.get(virtualNodes.firstKey());
+        } else {
+            virtualNodeName = subMap.get(subMap.firstKey());
+        }
+        return getRealNodeName(virtualNodeName);
+    }
+
 
     /**
      * 添加服务器
@@ -123,7 +124,7 @@ public class ConsistentHashingWithVirtualNode {
 
         resMap.forEach(
                 (k, v) -> {
-                    System.out.println("group " + k + ": " + v + "(" + v / 100000.0D + "%)");
+                    System.out.println("group " + k + ": " + v + "(" + v / 1000.0D + "%)");
                 }
         );
     }

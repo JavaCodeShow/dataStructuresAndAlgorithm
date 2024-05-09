@@ -17,9 +17,8 @@ public class BinarySearch {
     public int binarySearch1(int[] arr, int k) {
         int heigth = arr.length;
         int low = 0;
-        int mid;
         while (low < heigth) {
-            mid = (low + heigth) / 2;
+            int mid = (low + heigth) / 2;
             if (arr[mid] < k) {
                 low = mid + 1;
             } else if (arr[mid] > k) {
@@ -33,7 +32,7 @@ public class BinarySearch {
 
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        int i = new BinarySearch().binarySearch1(arr, 1);
+        int i = new BinarySearch().binarySearch1(arr, 4);
         System.out.println("i = " + i);
     }
 }
