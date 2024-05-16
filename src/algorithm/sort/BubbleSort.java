@@ -36,8 +36,6 @@ public class BubbleSort {
             }
             if (!flag) {
                 break;
-            } else {
-                flag = false;
             }
         }
         return arr;
